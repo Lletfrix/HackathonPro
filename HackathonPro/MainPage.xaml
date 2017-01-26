@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HackathonPro"
+             x:Class="HackathonPro.MainPage">
+
+  <StackLayout>
+    <StackLayout BackgroundColor="#3A81C3" Padding="10, 20, 10, 10" Orientation="Horizontal" x:Name="searchLayout">
+      <Entry x:Name="searchBar" Placeholder="Buscar" HorizontalOptions="FillAndExpand"/>
+      <Button x:Name="searchButton" Text="&#128270;" Clicked="search" HorizontalOptions="End"/>
+    </StackLayout>
+
+    <ListView ItemTapped="openProblem" x:Name="problemsListView" SeparatorVisibility="None" HasUnevenRows="true">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <Frame Margin="10">
+              <StackLayout Orientation="Horizontal">
+                <StackLayout>
+                  <Image HeightRequest="150" HorizontalOptions="CenterAndExpand" Source="{Binding getImageURL}" />
+                  <Label Margin="5,10,5,10" Text="{Binding title}" VerticalOptions="End"/>
+                </StackLayout>
+              </StackLayout>
+            </Frame>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+  </StackLayout>
+
+</ContentPage>

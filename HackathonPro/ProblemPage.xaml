@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HackathonPro.ProblemPage">
+
+  <StackLayout HorizontalOptions="Center" Margin="10,0,10,0">
+    
+    <Image HeightRequest="250" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" Source="{Binding getImageURL}"/>
+    <Label Text="{Binding title}" Margin="0,15,0,0" FontSize="25" FontFamily="Bold"/>
+    <Label Text="{Binding difficulty_show}" Margin="0,10,0,0" FontSize="18"/>
+    <Label Text="{Binding teacher_show}" Margin="0,10,0,0" FontSize="18"/>
+    <Label Text="{Binding subject_show}" Margin="0,10,0,0" FontSize="18"/>
+
+  </StackLayout>
+
+</ContentPage>

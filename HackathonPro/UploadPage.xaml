@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HackathonPro.UploadPage">
+  <StackLayout>
+      <StackLayout Padding="10, 10, 10, 10" Orientation="Vertical" x:Name="uploadLayout">
+        <Button Text="Photo" Clicked="OnAdd"/>
+        <Entry x:Name="nameText" Placeholder="Nombre" HorizontalOptions="FillAndExpand"/>
+        <Entry x:Name="subject" Placeholder="Asignatura" HorizontalOptions="FillAndExpand"/>
+        <Entry x:Name="teacher" Placeholder="Profesor" HorizontalOptions="FillAndExpand"/>
+        <Entry x:Name="difficulty" Placeholder="Dificultad (del 1 al 10)" HorizontalOptions="FillAndExpand"/>
+        <Button Text="Subir" Clicked="UploadProblem"/>
+      </StackLayout>
+    <WebView x:Name="animation" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Source="http://i.imgur.com/0YUG6vX.gif"/>
+  </StackLayout>
+</ContentPage>
